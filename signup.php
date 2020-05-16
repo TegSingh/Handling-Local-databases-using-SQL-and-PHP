@@ -14,8 +14,8 @@
     $sql2 = "SELECT * FROM users WHERE username='$userName'";
     $result = $conn->query($sql2); 
     if($result->num_rows > 0){
-        echo "Error: USERNAME ALREADY EXISTS<br>";
-        echo "<a href='index.html'>Register with a different Username</a><br>";
+        echo "<h3>Error: USERNAME ALREADY EXISTS<br>";
+        echo "<a href='index.html'>Register with a different Username</a><br><h3>";
     } else {
         $sql = "INSERT INTO users(firstName, lastName, username, email, telephone, dob, pwd) VALUES ('$firstName', '$lastName', '$userName', '$email', '$telephone', '$dob', '$pwd')";
     }
@@ -46,9 +46,7 @@
                 }
             }
         }
-    }
-    else
-        echo "Erro: ".$conn->error;   
+    }  
     
     $conn->close();
 ?>
