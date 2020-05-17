@@ -1,32 +1,33 @@
 <html>
-	<head>
-
+    <head>
 		<title>My Login System</title>
-		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<script type="text/javascript" src="script.js"></script>
-	</head>
-	<body>
-		<div id="header">			
-			<img align="left" id="logo" src="Images/Logo2.png" title="Logo" height="70px" width="64px">
-			<form method="POST" action="login.php" align="right" id="login">
-				<input id="username-login" type="text" name="username-login" placeholder="Username" required>
-				<input id="password-login" type="password" name="password-login" placeholder="Password" required>
-				<button id=login" type="Submit">Login</button>
-			</form>
-		<div>
-		<div id="content">
-			<button id="register-header">Register</button>
-			<form method="POST" align="center" action="signup.php">
-				<input id="first-name" type="text" name="first-name" placeholder="First-name" required>
-				<input id="last-name" type="text" name="last-name" placeholder="Last-name"required><br>
-				<input id="username" type="text" name="username" placeholder="Username"required><br>
-				<input id="email-register" type="email" name="email-register"  placeholder="Email" required><br>
-				<input id="phone" type="tel" name="phone" placeholder="Telephone"required>
-				<input id="dob" type="date" name="dob" placeholder="Date of Birth"required>
-				<input id="password-register-new" type="password" name="password-register-new" placeholder="New-Password" required><br>
-				<input id="password-register-confirm" type="password" name="password-register-confirm" placeholder="Confirm-Password" required><br>
-				<button align="center" id="register" type="submit">Sign-Up</button>
-			</form>
-		<div>
-	</body>
+    </head>
+    <body>
+        <div id="header">			
+			<button id="login-button" onclick="openMode(event,'login-button')" type="button">Login</button>
+            <button id="register-button" onclick="openMode(event,'register-button')" type="button">Register</button>
+		</div>
+        <div id="content">    
+            <form method="POST" action="login.php" align="right" id="login">
+                <div id="login-header">Login</div>
+                <input id="username-login" type="text" name="username-login" placeholder="Username" required><br>
+                <input id="password-login" type="password" name="password-login" placeholder="Password" required><br>
+                <button id="login-submit" type="Submit">Login</button>
+            </form>
+            <form method="POST" align="center" action="signup.php" id="register">
+                <div id="register-header">Register</div>
+                <input id="first-name" type="text" name="first-name" placeholder="First-name" required>
+                <input id="last-name" type="text" name="last-name" placeholder="Last-name"required><br>
+                <input id="username" type="text" name="username" placeholder="Username"required><br>
+                <input id="email-register" type="email" name="email-register"  placeholder="Email" required><br>
+                <input id="phone" type="tel" name="phone" placeholder="Telephone"required><br>
+                <input id="dob" type="date" name="dob" placeholder="Date of Birth"required><br>
+                <input id="password-register-new" type="password" name="password-register-new" placeholder="New-Password" required><br>
+                <input id="password-register-confirm" type="password" name="password-register-confirm" placeholder="Confirm-Password" required><br>
+                <button id="register-submit" type="submit">Sign-Up</button>
+            </form>
+        </div>
+    </body>
 </html>

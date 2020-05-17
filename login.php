@@ -29,4 +29,8 @@
         echo "</table>";
         echo "<button style='border: solid 1pt black; margin: 10px 110px; padding: 5px' align='center'>Log-Out</button>";
     }
+    else {
+        echo "<h2>WRONG PASSWORD</h2>";
+        echo "<a href='index.html'>Try Again</a><br><h3>";
+    }
 ?>
