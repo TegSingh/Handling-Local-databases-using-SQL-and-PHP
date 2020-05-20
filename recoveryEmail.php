@@ -12,8 +12,5 @@
                 <button id="recovery-email-submit-button" type="Submit">Submit</button>
             </form>
         </div>
-        <?php
-            
-        ?>
     </body>
 </html>

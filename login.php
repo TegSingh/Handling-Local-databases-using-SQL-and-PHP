@@ -32,6 +32,5 @@
     else {
         echo "<h2>WRONG PASSWORD</h2>";
         echo "<a href='index.html'>Try Again</a><br><h3>";
+    }
 ?>
-
-
