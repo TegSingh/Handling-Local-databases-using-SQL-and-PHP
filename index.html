@@ -1,7 +1,7 @@
 <html>
     <head>
 		<title>My Login System</title>
-        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
 		<script type="text/javascript" src="script.js"></script>
     </head>
     <body>
@@ -14,9 +14,10 @@
                 <div id="login-header">Login</div>
                 <input id="username-login" type="text" name="username-login" placeholder="Username" required><br>
                 <input id="password-login" type="password" name="password-login" placeholder="Password" required><br>
-                <button id="login-submit" type="Submit">Login</button>
+                <button id="login-submit" type="Submit">Login</button><br>
+                <div id="forgot-password" style="text-align: center; margin: 10px;"><a href="recoveryEmail.php">Forgot Password?</a></div>
             </form>
-            <form method="POST" align="center" action="signup.php" id="register">
+            <form method="POST" align="center" action="signup.php" id="register" name="register" onsubmit="return validateForm()">
                 <div id="register-header">Register</div>
                 <input id="first-name" type="text" name="first-name" placeholder="First-name" required>
                 <input id="last-name" type="text" name="last-name" placeholder="Last-name"required><br>
