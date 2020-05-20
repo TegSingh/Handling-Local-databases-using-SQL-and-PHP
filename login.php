@@ -27,7 +27,7 @@
         echo "<tr><th>Phone</th><td>".$row["telephone"]."</td></tr>";
         echo "<tr><th>Date of birth</th><td>".$row["dob"]."</td></tr>";
         echo "</table>";
-        echo "<a href='index.html'><button style='border: solid 1pt black; margin: 10px 110px; padding: 5px' align='center'>Log-Out</button></a>0"1;
+        echo "<a href='index.html'><button style='border: solid 1pt black; margin: 10px 110px; padding: 5px' align='center'>Log-Out</button></a>";
     }
     else {
         echo "<h2>WRONG PASSWORD</h2>";
@@ -131,4 +131,3 @@
 
 
 
-]
