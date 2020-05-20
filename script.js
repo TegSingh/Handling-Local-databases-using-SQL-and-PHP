@@ -20,3 +20,15 @@ function validateForm() {
     else
         return true;
 }
+
+function validateNewPassword() {
+    console.log("ALERT!!!!!!!");
+    var pwd = document.forms["password-form"]["reset-password-new"].value;
+    var confirmPwd = document.forms["password-form"]["reset-password-confirm"].value;
+    if (pwd !== confirmPwd) {
+        alert("Passwords dont Match");
+        return false;
+    }
+    else
+        return true;    
+}
