@@ -11,15 +11,24 @@
     $pwd = $_POST['password-register-new'];
     $usernum = 0;
 
-    $sql2 = "SELECT * FROM users WHERE username='$userName'";
-    $result = $conn->query($sql2); 
+    $sql_username = "SELECT * FROM users WHERE username='$userName'";
+    $result = $conn->query($sql_username); 
     if($result->num_rows > 0){
         echo "<h3>Error: USERNAME ALREADY EXISTS<br>";
         echo "<a href='index.html'>Register with a different Username</a><br><h3>";
     } else {
         $sql = "INSERT INTO users(firstName, lastName, username, email, telephone, dob, pwd) VALUES ('$firstName', '$lastName', '$userName', '$email', '$telephone', '$dob', '$pwd')";
     }
-    
+
+    $sql_email = "SELECT * FROM users WHERE email='$email'";
+    $result_email = $conn->query($sql_email); 
+    if($result->num_rows > 0){
+        echo "<h3>Error: EMAIL ALREADY EXISTS<br>";
+        echo "<a href='index.html'>Register with a different Email</a><br><h3>";
+    } else {
+        $sql = "INSERT INTO users(firstName, lastName, username, email, telephone, dob, pwd) VALUES ('$firstName', '$lastName', '$userName', '$email', '$telephone', '$dob', '$pwd')";
+    }
+
     if($conn->query($sql)===TRUE){
 
         $sql1 = "SELECT * FROM users";

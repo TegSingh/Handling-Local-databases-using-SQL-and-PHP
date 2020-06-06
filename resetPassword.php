@@ -1,3 +1,22 @@
+<?php
+    require("databasesConnect.php");
+    require("messagePassword.php");
+    
+    $pwd_reset_new = $_POST['reset-password-new'];
+    $pwd_reset_confirm = $_POST['reset-password-confirm'];
+
+    $sql_reset = "UPDATE users SET pwd = '$pwd_reset_new' WHERE email = '$recoveryEmail'";    
+    
+    if($conn->query($sql_reset))    
+        echo "<body style = 'display: none; background-color: lightgray;'>
+        <fieldset style ='background-color: white; font-size: 20px;'>Password Reset Successfully<br>
+        <a href='index.html'>Return to the login page</a></fieldset></body>";
+    else 
+        echo "<body style = 'display: none; background-color: lightgray;'>
+        <fieldset style ='background-color: white; font-size: 20px;'>Password reset failed<br>
+        <a href='index.html'>Return to the login page</a>
+        <a href='resetPassword.php'>Try Again</a></fieldset></body>";    
+?>
 <html>
     <head>
         <title>Reset Password</title>

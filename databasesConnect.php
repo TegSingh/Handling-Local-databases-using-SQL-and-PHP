@@ -39,5 +39,6 @@
     } else {
         echo "Error: ".$conn->connect_error."<br>";
         header("index.html");
-    }      
+    }
+
 ?>
